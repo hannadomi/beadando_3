@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1747340875 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.cpp
+	"gameboard.hpp"
+	"jatekmester.hpp"
+	"graphics.hpp"
+
+1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.hpp
+	"widgets.hpp"
+	"gamecell.hpp"
+	<vector>
+	<memory>
+
+1744301130 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\widgets.hpp
+	"graphics.hpp"
+
+1747340157 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\include\graphics.hpp
+	<string>
+	<vector>
+
+1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.hpp
+	"widgets.hpp"
+
+1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
+	"gameboard.hpp"
+
+1747340875 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
+	"jatekmester.hpp"
+	<iostream>
+
+1747340875 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\main.cpp
+	"graphics.hpp"
+	"gameboard.hpp"
+	"jatekmester.hpp"
+	<vector>
+
+1744276286 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\widgets.cpp
+	"widgets.hpp"
+
