@@ -21,16 +21,24 @@ void Screens::run() {
     event ev;
 
     while (gin >> ev && ev.keycode != key_escape) {
-        gout << move_to(0, 0) << color(0, 0, 139) << box(screen_w, screen_h); // sötétkék háttér
 
         if (app_state == AppState::StartScreen) {
-            // Dropdown megjelenítése, kezelése
-            player_selector->draw();
-            player_selector->handle(ev);
+                gout << move_to(0, 0) << color(0, 0, 139) << box(screen_w, screen_h); // sötétkék háttér
 
-            gout << move_to(100, 100) << color(255, 255, 255)<< text("Amõba játék - Válassz játékos számot!");
-            if (ev.type == ev_mouse && ev.button == btn_left) {
-                // Itt olvasd ki a kiválasztott játékos számot és állítsd be
+        gout << move_to(100, 100) << color(255, 255, 255)<< text("Amõba játék - Válassz játékos számot!");
+
+            // Dropdown megjelenítése, kezelése
+            player_selector->handle(ev);
+            player_selector->draw();
+
+            int btn_x = 100, btn_y = 260, btn_w = 150, btn_h = 40;
+            gout << move_to(btn_x, btn_y) << color(255, 255, 255) << box(btn_w, btn_h);
+            gout << move_to(btn_x + 20, btn_y + 25) << color(0, 0, 0) << text("Start játék");
+
+            if (ev.type == ev_mouse && ev.button == btn_left &&
+                ev.pos_x >= btn_x && ev.pos_x <= btn_x + btn_w &&
+                ev.pos_y >= btn_y && ev.pos_y <= btn_y + btn_h) {
+
                 if (player_selector->get_string_value() == "1 játékos") {
                     jatekos_szam = 1;
                 } else {
@@ -48,17 +56,20 @@ void Screens::run() {
             }
 
         } else if (app_state == AppState::GameOverScreen) {
-            gout << move_to(100, 100) << color(255, 255, 255)
-                 << text("Játék vége!");
-            gout << move_to(100, 140) << text("Nyertes: ")
-                 << text(mester.get_winner_name());
-            gout << move_to(100, 180) << text("Kattints új játékhoz.");
-            if (ev.type == ev_mouse && ev.button == btn_left) {
-                mester.reset();
-                app_state = AppState::StartScreen;
-            }
-        }
+    // Háttér letakarása (pl. sötétszürke)
+    gout << move_to(0, 0) << color(50, 50, 50) << box(screen_w, screen_h);
 
+    // Szövegek
+    gout << move_to(100, 100) << color(255, 255, 255) << text("Játék vége!");
+    gout << move_to(100, 140) << text("Nyertes: ") << text(mester.get_winner_name());
+    gout << move_to(100, 180) << text("Kattints új játékhoz.");
+
+    // Visszatérés a kezdõképernyõre
+    if (ev.type == ev_mouse && ev.button == btn_left) {
+        mester.reset();
+        app_state = AppState::StartScreen;
+    }
+}
         gout << refresh;
     }
 }
