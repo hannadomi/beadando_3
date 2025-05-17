@@ -10,18 +10,32 @@ Screens::Screens(int r, int c, int cs)
       app_state(AppState::StartScreen)
 {
     gout.open(screen_w, screen_h);
+     std::vector<std::string> player_options = {"1 játékos", "2 játékos"};
+    player_selector = new DropdownWidget(100, 200, 150, 30, player_options, 2);
 }
+Screens::~Screens(){
+    delete player_selector;
+    }
 
 void Screens::run() {
     event ev;
 
     while (gin >> ev && ev.keycode != key_escape) {
-        gout << move_to(0, 0) << color(0, 0, 0) << box(screen_w, screen_h);
+        gout << move_to(0, 0) << color(0, 0, 139) << box(screen_w, screen_h); // sötétkék háttér
 
         if (app_state == AppState::StartScreen) {
-            gout << move_to(100, 100) << color(255, 255, 255)
-                 << text("Amõba játék - Kattints a kezdéshez!");
+            // Dropdown megjelenítése, kezelése
+            player_selector->draw();
+            player_selector->handle(ev);
+
+            gout << move_to(100, 100) << color(255, 255, 255)<< text("Amõba játék - Válassz játékos számot!");
             if (ev.type == ev_mouse && ev.button == btn_left) {
+                // Itt olvasd ki a kiválasztott játékos számot és állítsd be
+                if (player_selector->get_string_value() == "1 játékos") {
+                    jatekos_szam = 1;
+                } else {
+                    jatekos_szam = 2;
+                }
                 app_state = AppState::GameScreen;
             }
 
@@ -48,3 +62,4 @@ void Screens::run() {
         gout << refresh;
     }
 }
+

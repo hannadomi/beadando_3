@@ -27,11 +27,22 @@ void GameBoard::draw() {
 }
 
 void GameBoard::handle(event ev) {
-    if (ev.type == ev_mouse && ev.button == btn_left) {
+      for (auto& row_vec : cells) {
+        for (auto& cell : row_vec) {
+            cell->highlight(false);
+        }
+    }
+     if (ev.type == ev_mouse) {
         int col = (ev.pos_x - x) / cell_size;
         int row = (ev.pos_y - y) / cell_size;
-        if (row >= 0 && row < rows && col >= 0 && col < cols && mester) {
-            mester->lepett(row, col); // logikát továbbítjuk
+
+        if (row >= 0 && row < rows && col >= 0 && col < cols) {
+            cells[row][col]->highlight(true);
+        }
+
+        // Ha kattintás is történt, akkor lépés
+        if (ev.button == btn_left && mester) {
+            mester->lepett(row, col);
         }
     }
 }

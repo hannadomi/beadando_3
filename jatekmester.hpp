@@ -10,8 +10,7 @@ protected:
     int rows, cols;
     bool game_over = false;
     CellState winner = EMPTY;
-
-
+    int jatekos_szam;
 
 public:
     JatekMester(GameBoard* b, int rows, int cols);
@@ -21,6 +20,7 @@ public:
     void reset();
     bool is_game_over() const;
     std::string get_winner_name() const;
+    void set_jatekos_szam(int szam);
 
 };
 

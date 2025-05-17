@@ -6,6 +6,10 @@ JatekMester::JatekMester(GameBoard* b, int r, int c)
 {
     board->set_mester(this);
 }
+void JatekMester::set_jatekos_szam(int szam) {
+    jatekos_szam = szam; // egy osztálytagot be kell vezetned pl. int jatekos_szam;
+}
+
 
 void JatekMester::lepett(int row, int col) {
     if (game_over) return;

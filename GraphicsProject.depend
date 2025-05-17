@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1747340875 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.cpp
+1747485378 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.cpp
 	"gameboard.hpp"
 	"jatekmester.hpp"
 	"graphics.hpp"
@@ -20,10 +20,10 @@
 1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.hpp
 	"widgets.hpp"
 
-1747482647 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
+1747487027 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
 	"gameboard.hpp"
 
-1747482647 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
+1747486778 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
 	"jatekmester.hpp"
 	<iostream>
 
@@ -36,16 +36,26 @@
 1744276286 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\widgets.cpp
 	"widgets.hpp"
 
-1747483957 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.cpp
+1747485110 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.cpp
 	"gamecell.hpp"
 	"graphics.hpp"
 	<cmath>
 
-1747482021 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.hpp
+1747487058 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.hpp
 	"gameboard.hpp"
 	"jatekmester.hpp"
 	"graphics.hpp"
+	"dropdownwidget.hpp"
 
-1747481900 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.cpp
+1747486972 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.cpp
 	"screens.hpp"
+
+1747486778 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\dropdownwidget.hpp
+	"widgets.hpp"
+	<vector>
+	<string>
+
+1747486778 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\dropdownwidget.cpp
+	"dropdownwidget.hpp"
+	"graphics.hpp"
 

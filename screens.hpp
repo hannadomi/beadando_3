@@ -3,6 +3,8 @@
 #include "gameboard.hpp"
 #include "jatekmester.hpp"
 #include "graphics.hpp"
+#include "dropdownwidget.hpp"
+
 using namespace genv;
 
 enum class AppState {
@@ -19,9 +21,12 @@ private:
 
     GameBoard board;
     JatekMester mester;
+    DropdownWidget* player_selector;
+    int jatekos_szam;
 
 public:
     Screens(int r, int c, int cs);
+    ~Screens();
     void run();
 };
 

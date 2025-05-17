@@ -18,10 +18,18 @@ void draw_fake_circle(int cx, int cy, int radius) {
 
 
 void GameCell::draw() {
-    // h�tt�r
+    // háttér
 
     gout << move_to(x, y)
-         << color(200, 200, 200) << box(width, height);
+         << color(0, 0, 64) << box(width, height);
+         // Keret a cella köré
+    gout << move_to(x, y)
+         << color(255, 255, 255)
+         << line(width, 0)               // felső oldal
+         << line(0, height)              // jobb oldal
+         << line(-width, 0)              // alsó oldal
+         << line(0, -height);            // bal oldal (vissza az elejére)
+
 
     if (_highlighted) {
         gout << move_to(x+1, y+1)
@@ -34,7 +42,7 @@ void GameCell::draw() {
         gout << move_to(x+5, y+5) << line(width-10, height-10);
         gout << move_to(x+width-5, y+5) << line(-width+10, height-10);
     } else if (_state == O) {
-        gout << color(0, 0, 255);
+        gout << color(0, 255, 0);
         draw_fake_circle(x + width / 2, y + height / 2, width / 3);
     }
 }
@@ -42,7 +50,7 @@ void GameCell::draw() {
 
 
 void GameCell::handle(event ev) {
-    // ezt ink�bb a board vagy a JatekMester fogja kezelni, de biztos�tjuk az interface-t
+    // ezt inkább a board vagy a JatekMester fogja kezelni, de biztosítjuk az interface-t
 }
 
 void GameCell::set_state(CellState s) {
