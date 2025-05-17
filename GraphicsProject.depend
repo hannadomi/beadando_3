@@ -20,19 +20,32 @@
 1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.hpp
 	"widgets.hpp"
 
-1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
+1747482647 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
 	"gameboard.hpp"
 
-1747340875 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
+1747482647 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
 	"jatekmester.hpp"
 	<iostream>
 
-1747340875 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\main.cpp
-	"graphics.hpp"
+1747483957 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\main.cpp
 	"gameboard.hpp"
 	"jatekmester.hpp"
+	"screens.hpp"
 	<vector>
 
 1744276286 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\widgets.cpp
 	"widgets.hpp"
+
+1747483957 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.cpp
+	"gamecell.hpp"
+	"graphics.hpp"
+	<cmath>
+
+1747482021 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.hpp
+	"gameboard.hpp"
+	"jatekmester.hpp"
+	"graphics.hpp"
+
+1747481900 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.cpp
+	"screens.hpp"
 

@@ -1,9 +1,12 @@
-#include "graphics.hpp"
 #include "gameboard.hpp"
 #include "jatekmester.hpp"
+#include "screens.hpp"
 #include <vector>
 
 using namespace genv;
+
+
+
 
 int main()
 {
@@ -11,6 +14,9 @@ int main()
     int rows = 15, cols = 15;
     int screen_w = cols * cell_size;
     int screen_h = rows * cell_size;
+    Screens app(15, 15, 30);
+    app.run();
+
 
     gout.open(screen_w, screen_h);
 

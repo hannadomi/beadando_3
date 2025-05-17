@@ -8,14 +8,19 @@ JatekMester::JatekMester(GameBoard* b, int r, int c)
 }
 
 void JatekMester::lepett(int row, int col) {
+    if (game_over) return;
+
     auto cell = board->get_cell(row, col);
     if (cell->get_state() != EMPTY) return;
 
     cell->set_state(current_player);
 
     if (ellenoriz_gyozelem(row, col)) {
+        winner = current_player;
+        game_over = true;
         std::cout << (current_player == X ? "X" : "O") << " nyert!\n";
-        // késõbb: kijelzés GUI-ban
+
+
     } else {
         kovetkezo_jatekos();
     }
@@ -46,8 +51,21 @@ bool JatekMester::ellenoriz_gyozelem(int row, int col) {
 
     return false;
 }
+bool JatekMester::is_game_over() const {
+    return game_over;
+}
+
+
+std::string JatekMester::get_winner_name() const {
+    if (winner == X) return "X";
+    if (winner == O) return "O";
+    return "Nincs";
+}
+
 
 void JatekMester::reset() {
     board->reset();
     current_player = X;
+    game_over = false;
 }
+

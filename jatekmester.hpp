@@ -8,6 +8,10 @@ protected:
     GameBoard* board;
     CellState current_player;
     int rows, cols;
+    bool game_over = false;
+    CellState winner = EMPTY;
+
+
 
 public:
     JatekMester(GameBoard* b, int rows, int cols);
@@ -15,6 +19,9 @@ public:
     bool ellenoriz_gyozelem(int row, int col);
     void kovetkezo_jatekos();
     void reset();
+    bool is_game_over() const;
+    std::string get_winner_name() const;
+
 };
 
 #endif

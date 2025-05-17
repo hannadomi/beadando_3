@@ -19,6 +19,7 @@ void draw_fake_circle(int cx, int cy, int radius) {
 
 void GameCell::draw() {
     // háttér
+
     gout << move_to(x, y)
          << color(200, 200, 200) << box(width, height);
 
@@ -34,7 +35,7 @@ void GameCell::draw() {
         gout << move_to(x+width-5, y+5) << line(-width+10, height-10);
     } else if (_state == O) {
         gout << color(0, 0, 255);
-        draw_fake_circle(x + width / 2, y + height / 2, width / 3);  // <--- ezt használd
+        draw_fake_circle(x + width / 2, y + height / 2, width / 3);
     }
 }
 
