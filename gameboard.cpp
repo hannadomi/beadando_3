@@ -62,3 +62,8 @@ void GameBoard::reset() {
 std::shared_ptr<GameCell> GameBoard::get_cell(int row, int col) {
     return cells[row][col];
 }
+CellState GameBoard::get(int row, int col) const {
+    return cells[row][col]->get_state();
+}
+
+

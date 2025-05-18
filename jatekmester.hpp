@@ -11,6 +11,9 @@ protected:
     bool game_over = false;
     CellState winner = EMPTY;
     int jatekos_szam;
+    int evaluate_cell(int row, int col);
+    int score_direction(int row, int col, int dr, int dc);
+
 
 public:
     JatekMester(GameBoard* b, int rows, int cols);
@@ -21,6 +24,10 @@ public:
     bool is_game_over() const;
     std::string get_winner_name() const;
     void set_jatekos_szam(int szam);
+    void lepes_geppel();
+    int get_current_player() const;
+
+
 
 };
 

@@ -48,7 +48,13 @@ void Screens::run() {
             }
 
         } else if (app_state == AppState::GameScreen) {
-            board.handle(ev);
+            if (mester.get_current_player() == X || jatekos_szam == 2) {
+                board.handle(ev);
+            }
+
+            while (jatekos_szam == 1 && mester.get_current_player() == O && !mester.is_game_over()) {
+                    mester.lepes_geppel();
+            }
             board.draw();
 
             if (mester.is_game_over()) {

@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1747485378 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.cpp
+1747493410 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.cpp
 	"gameboard.hpp"
 	"jatekmester.hpp"
 	"graphics.hpp"
 
-1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.hpp
+1747493314 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gameboard.hpp
 	"widgets.hpp"
 	"gamecell.hpp"
 	<vector>
@@ -20,10 +20,10 @@
 1747340875 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\gamecell.hpp
 	"widgets.hpp"
 
-1747487027 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
+1747561919 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.hpp
 	"gameboard.hpp"
 
-1747486778 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
+1747561919 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\jatekmester.cpp
 	"jatekmester.hpp"
 	<iostream>
 
@@ -47,7 +47,7 @@
 	"graphics.hpp"
 	"dropdownwidget.hpp"
 
-1747486972 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.cpp
+1747562380 source:c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\screens.cpp
 	"screens.hpp"
 
 1747486778 c:\users\domin\desktop\egyetem\bevprog_2\beadando_3\graphicslib64_0412\dropdownwidget.hpp
